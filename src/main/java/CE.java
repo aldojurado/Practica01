@@ -6,6 +6,21 @@ public class CE {
         verificaDatos(args);
     }
 
+    public static void verificaDatoss(String[] args) {
+        int a = 0;
+        int b = 0;
+        String c = "";
+        if (args.length != 3) {
+            System.out.println("Solo se reciben 3 argumentos");
+        } else {
+            try {
+
+            } catch (Exception e) {
+                // TODO: handle exception
+            }
+        }
+    }
+
     public static void verificaDatos(String[] args) {
         int k = 0;
         int d = 0;
