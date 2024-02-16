@@ -2,8 +2,8 @@
 
 ## Integrantes del equipo:
 
-- **Ángeles Sánchez Aldo Javier**
-- **Jurado Guadalupe Aldo Emilio**
+- **Ángeles Sánchez Aldo Javier **
+- **Jurado Guadalupe Aldo Emilio 320025255**
 
 ## Requisitos
 
