@@ -50,14 +50,14 @@ mvn clean
 ```
 
 
-## Preguntas 
-# 1. ¿Cuál es la representación en binario del número decimal 172_10?
-# 2. ¿Cuál es la representación en hexadecimal del número octal 74_8?\
-# 3. Desarrolla cuál es el número mínimo de bits requeridos para representar todos
+# Preguntas 
+## 1. ¿Cuál es la representación en binario del número decimal 172_10?
+## 2. ¿Cuál es la representación en hexadecimal del número octal 74_8?\
+## 3. Desarrolla cuál es el número mínimo de bits requeridos para representar todos
 los caracteres en un teclado que tiene...
 - 9 letras.
 - 16 letras.
 - 17 letras.
 
-# 4. En general, ¿es posible hacer la conversión entre una base n y una base m, para
+## 4. En general, ¿es posible hacer la conversión entre una base n y una base m, para
 cualquier n, m > 1 y n ̸= m? Desarrolla.
