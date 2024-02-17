@@ -1,4 +1,4 @@
-# Tarea 01: Problemas de Optimización
+# Práctica 1: Conversión de bases
 
 ## Integrantes del equipo:
 
@@ -30,14 +30,14 @@ sudo dnf install java-devel
 
 ```
 
-## Compilar y Ejecutar
+## Compilar
 
 Para compilar de forma limpia:
 
 ```bash
 mvn clean install
 ```
-
+## Ejecutar
 Para ejecutar el programa compilado, se puede hacer de la siguiente forma:
 
 ```bash
@@ -55,7 +55,7 @@ mvn clean
 # Preguntas
 
 ### 1. ¿Cuál es la representación en binario del número decimal 172_10?
-<<<<<<< HEAD
+
 
 Respuesta
 
