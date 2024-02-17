@@ -14,14 +14,27 @@ public class Conversiones {
 
         Scanner sc = new Scanner(System.in);
         int base1 = 0;
+
         System.out.println("Ingresa la primer base: ");
         while (base1 == 0 || baseNoValida(base1)) {
-            base1 = sc.nextInt();
+            // Aquí mismo se checa que la base sí pueda ser parseada a int
+            try {
+                base1 = sc.nextInt();
+            } catch (Exception e) {
+                System.out.println("La base debe ser un entero");
+                sc.nextLine();
+            }
         }
         int base2 = 0;
         System.out.println("Ingresa la segunda base: ");
         while (base2 == 0 || baseNoValida(base2)) {
-            base2 = sc.nextInt();
+            // Aquí mismo se checa que la base sí pueda ser parseada a int
+            try {
+                base2 = sc.nextInt();
+            } catch (Exception e) {
+                System.out.println("La base debe ser un entero");
+                sc.nextLine();
+            }
         }
         String numero = "";
         System.out.println("Ingresa el número a convertir: ");
@@ -40,7 +53,34 @@ public class Conversiones {
      * @return
      */
     private static boolean numNovalido(String numero, int base) {
+        if (base == 2 || base == 8 || base == 10) {
+            char baseChar = (char) (base + 47);
+            System.out.println("baseChar: " + baseChar);
+            for (int i = 0; i < numero.length(); i++) {
+                if (numero.charAt(i) < '0' || numero.charAt(i) > baseChar) {
+                    imprimeNoValido(numero);
+                    return true;
+                }
+            }
+        } else if (base == 16) {
+            for (int i = 0; i < numero.length(); i++) {
+                if (numero.charAt(i) < '0' || numero.charAt(i) > '9' && numero.charAt(i) < 'A'
+                        || numero.charAt(i) > 'F') {
+                    imprimeNoValido(numero);
+                    return true;
+                }
+            }
+        }
         return false;
+    }
+
+    /**
+     * Imprime que el número no es válido
+     * 
+     * @param numero
+     */
+    private static void imprimeNoValido(String numero) {
+        System.out.println(ANSI_RED + "Número " + numero + " no válido\n" + ANSI_WHITE + "Ingresa un número válido: ");
     }
 
     /**
