@@ -88,28 +88,28 @@ El número 9 en binario es:
 1. Dividimos 9 entre 2, resultado 4, residuo 1
 2. Dividimos 4 entre 2, resultado 2, residuo 0
 3. Dividimos 2 entre 2, el resultado 1, residuo 0
-4. 3. Dividimos 1 entre 2, el resultado 0, residuo 1
-Entonces, el 9 en binario es 1001.
-Notando que 1001 tiene 4 bits, entonces necesitamos al menos 4 bits para representar 9 letras.
-Como dato extra, el número más grande que podríamos representar con estos 4 bits sería 1111.
-Convirtiendo de binario a decimal:
-\[2^3+2^2+2^1+2^0 = 8+4+2+1 = 15.\]
+4. Dividimos 1 entre 2, el resultado 0, residuo 1 <br>
+Entonces, el 9 en binario es 1001.<br>
+Notando que 1001 tiene 4 bits, entonces necesitamos al menos 4 bits para representar 9 letras.<br>
+Como dato extra, el número más grande que podríamos representar con estos 4 bits sería 1111.<br>
+Convirtiendo de binario a decimal:<br>
+\[2^3+2^2+2^1+2^0 = 8+4+2+1 = 15.\]<br>
 Por lo tanto, con estos 4 bits podríamos representar hasta 15 letras distintas.
 
-Para 16 letras esos 4 bits ya no son suficientes ya que vimos que con 4 bits se pueden representar hasta 15 letras.
-Entonces, agreguemos un bit extra y veamos cuál será el número máximo de letras distintas que podremos representar.
-Con 5 bits, el número más grande representable es 11111 y convirtiendo a decimal:
-\[2^4+2^3+2^2+2^1+2^0=16+8+4+2+1 = 31.\]
-Entonces, con 5 bits podremos representar hasta 31 letras y como para este caso queremos representar 16 letras, entonces 5 bits será el número requerido.
-
-Para 17 letras, los mismos 5 bits serán suficientes, ya que en el caso anterior vimos que con 5 bits se pueden asignar 31 valores distintos a 31 letras distintas, entonces 17 letras aún son representables con 5 bits.
+Para 16 letras esos 4 bits ya no son suficientes ya que vimos que con 4 bits se pueden representar hasta 15 letras.<br>
+Entonces, agreguemos un bit extra y veamos cuál será el número máximo de letras distintas que podremos representar.<br>
+Con 5 bits, el número más grande representable es 11111 y convirtiendo a decimal:<br>
+\[2^4+2^3+2^2+2^1+2^0=16+8+4+2+1 = 31.\]<br>
+Entonces, con 5 bits podremos representar hasta 31 letras y como para este caso queremos representar 16 letras, entonces 5 bits será el número requerido.<br>
+<br>
+Para 17 letras, los mismos 5 bits serán suficientes, ya que en el caso anterior vimos que con 5 bits se pueden asignar 31 valores distintos a 31 letras distintas, entonces 17 letras aún son representables con 5 bits.<br>
 
 ### 4. En general, ¿es posible hacer la conversión entre una base n y una base m, para cualquier n, m > 1 y n ̸= m? Desarrolla.
-Sí es posible, ya que en las bases cada número se puede representar de forma única y por la forma en que las construimos tienen cierta estructura.
-Como vimos con el ayudante en base 2, base 8 y base 16; pasar de una base n a decimal es separar los números para hacer una suma de productos donde cada producto es el valor del dígito por la base a la potencia i, donde i sería el número que ocupa dicho dígito en el número base n (De derecha a izquierda empezando por cero).
+Sí es posible, ya que en las bases cada número se puede representar de forma única y por la forma en que las construimos tienen cierta estructura.<br>
+Como vimos con el ayudante en base 2, base 8 y base 16; pasar de una base n a decimal es separar los números para hacer una suma de productos donde cada producto es el valor del dígito por la base a la potencia i, donde i sería el número que ocupa dicho dígito en el número base n (De derecha a izquierda empezando por cero).<br>
 Por otro lado, para pasar de base 10 a una base m, usamos otro método que sería ir dividiendo el número entre la base, luego ir dividiendo entre los resultados hasta que el resultado sea cero, y al final los residuos van a ser la representación de esa base.
-Podemos ver que usando estos dos métodos, podemos ir desde una base n a una base m.
-Por lo tanto, concluimos que sí es posible y ya dimos una forma en la que pueden hacerlo.
+Podemos ver que usando estos dos métodos, podemos ir desde una base n a una base m.<br>
+Por lo tanto, concluimos que sí es posible y ya dimos una forma en la que pueden hacerlo.<br>
 Claro que habrá formas más directas de ir entre bases que sean múltiplos de otras, pero de este fue un método general que nos asegura el cambio de base para todo n, m > 1, donde n ̸= m.
 
 
