@@ -1,17 +1,61 @@
 import java.util.Scanner;
 
 public class Conversiones {
+    public static final String ANSI_BLACK = "\u001B[30m";
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_PURPLE = "\u001B[35m";
+    public static final String ANSI_CYAN = "\u001B[36m";
+    public static final String ANSI_WHITE = "\u001B[37m";
+
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-
+        int base1 = 0;
         System.out.println("Ingresa la primer base: ");
-        int base1 = sc.nextInt();
+        while (base1 == 0 || baseNoValida(base1)) {
+            base1 = sc.nextInt();
+        }
+        int base2 = 0;
         System.out.println("Ingresa la segunda base: ");
-        int base2 = sc.nextInt();
+        while (base2 == 0 || baseNoValida(base2)) {
+            base2 = sc.nextInt();
+        }
+        String numero = "";
         System.out.println("Ingresa el número a convertir: ");
-        String numero = sc.next();
+        while (numero.equals("") || numNovalido(numero, base1)) {
+            numero = sc.next();
+        }
         System.out.println(convertidor(base1, base2, numero));
+
+    }
+
+    /**
+     * Devuelve true si el número no es elemento de la base proporcionada
+     * 
+     * @param numero
+     * @param base
+     * @return
+     */
+    private static boolean numNovalido(String numero, int base) {
+        return false;
+    }
+
+    /**
+     * Devuelve true si la base no es válida
+     * 
+     * @param base1
+     * @return
+     */
+    private static boolean baseNoValida(int base) {
+        if (base != 2 && base != 8 && base != 10 && base != 16) {
+            System.out.println(ANSI_RED + "Base " + base + " no válida\n" + ANSI_WHITE + "Ingresa una base válida: ");
+            return true;
+        }
+        System.out.println(ANSI_GREEN + "Base " + base + " válida" + ANSI_WHITE);
+        return false;
     }
 
     public static String convertidor(int a, int b, String c) {

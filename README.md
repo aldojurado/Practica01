@@ -38,8 +38,11 @@ Para compilar de forma limpia:
 mvn clean install
 ```
 
-Para ejecutar el programa (después de compilar) hay dos formas:
+Para ejecutar el programa compilado, se puede hacer de la siguiente forma:
 
+```bash
+java -jar target/practica1.jar
+```
 
 ## Limpieza
 
@@ -49,14 +52,20 @@ Adicionalmente para limpiar los archivos generados por la compilación:
 mvn clean
 ```
 
+# Preguntas
 
-# Preguntas 
 ### 1. ¿Cuál es la representación en binario del número decimal 172_10?
+
 Respuesta
+
 ### 2. ¿Cuál es la representación en hexadecimal del número octal 74_8?
+
 Respuesta
+
 ### 3. Desarrolla cuál es el número mínimo de bits requeridos para representar todos los caracteres en un teclado que tiene 9 letras, 16 letras y 17 letras.
+
 Respuesta
 
 ### 4. En general, ¿es posible hacer la conversión entre una base n y una base m, para cualquier n, m > 1 y n ̸= m? Desarrolla.
+
 Respuesta

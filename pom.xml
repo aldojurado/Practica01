@@ -1,12 +1,12 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 <modelVersion>4.0.0</modelVersion>
-<groupId>computo</groupId>
-<artifactId>proyecto</artifactId>
-<version>Cómputo Evolutivo</version>
+<groupId>Arqui</groupId>
+<artifactId>practica</artifactId>
+<version>Organización y arquitectura de computadoras</version>
 <packaging>jar</packaging>
-<name>Tarea 01</name>
+<name>Práctica 01</name>
 <description>
-Tarea 01
+Práctica 01
 </description>
 <properties>
 <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -54,7 +54,7 @@ Tarea 01
 <configuration>
 <archive>
 <manifest>
-<mainClass>CE</mainClass>
+<mainClass>Conversiones</mainClass>
 </manifest>
 </archive>
 </configuration>
@@ -70,7 +70,7 @@ Tarea 01
 <version>3.1.1</version>
 </plugin>
 </plugins>
-<finalName>proyecto3</finalName>
+<finalName>practica1</finalName>
 </build>
 <reporting>
 <plugins>
