@@ -1,13 +1,8 @@
 import java.util.Scanner;
 
 public class Conversiones {
-    public static final String ANSI_BLACK = "\u001B[30m";
     public static final String ANSI_RED = "\u001B[31m";
     public static final String ANSI_GREEN = "\u001B[32m";
-    public static final String ANSI_YELLOW = "\u001B[33m";
-    public static final String ANSI_BLUE = "\u001B[34m";
-    public static final String ANSI_PURPLE = "\u001B[35m";
-    public static final String ANSI_CYAN = "\u001B[36m";
     public static final String ANSI_WHITE = "\u001B[37m";
 
     public static void main(String[] args) {
@@ -41,6 +36,8 @@ public class Conversiones {
         while (numero.equals("") || numNovalido(numero, base1)) {
             numero = sc.next();
         }
+        // cerramos flujo del scanner
+        sc.close();
         System.out.println(convertidor(base1, base2, numero));
 
     }
@@ -55,7 +52,6 @@ public class Conversiones {
     private static boolean numNovalido(String numero, int base) {
         if (base == 2 || base == 8 || base == 10) {
             char baseChar = (char) (base + 47);
-            System.out.println("baseChar: " + baseChar);
             for (int i = 0; i < numero.length(); i++) {
                 if (numero.charAt(i) < '0' || numero.charAt(i) > baseChar) {
                     imprimeNoValido(numero);
